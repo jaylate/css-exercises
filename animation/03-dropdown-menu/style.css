@@ -21,6 +21,23 @@
   display: none;
 }
 
+@keyframes drop {
+  from {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1.1);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+ul.dropdown-menu {
+  transform-origin: top;
+  animation: 1s drop ease-in-out;
+}
+
 ul.dropdown-menu li:hover {
   background: rgb(47, 46, 46);
 }
@@ -28,5 +45,3 @@ ul.dropdown-menu li:hover {
 .visible {
   display: block;
 }
-
-
